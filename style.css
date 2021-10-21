@@ -156,13 +156,14 @@
     
 
     @media screen and (max-width: 700px) {
-        .menu-option h3 {
-          display: none;
-        }
-        .compose,
+        .menu-option h3,
+        .compose button b,
         .meet,
         .chat {
             display: none;
+        }
+        .compose button{
+            padding: 0;
         }
         .main {
             grid-template-columns: 50px 1fr 50px;
