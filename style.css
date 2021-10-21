@@ -22,6 +22,8 @@
 .main {
     grid-area: main;
     overflow: scroll;
+    display: grid;
+    grid-template-columns: 250px 1fr 200px 50px;
 }
 
 .header1 {
@@ -70,10 +72,6 @@
     margin: 10px;
 }
 
-.main {
-    display: grid;
-    grid-template-columns: 250px 1fr 200px 50px;
-}
 .compose button {
     display: flex;
     margin-left: 10px;
@@ -88,7 +86,7 @@
     display: grid;
     padding-left: 10px;
     grid-gap: 5px;
-    grid-template-columns: 60px 1fr ;
+    grid-template-columns: 60px 1fr;
     place-items: start;
 }
 .chat img {
@@ -108,7 +106,7 @@
 .email-item {
     padding: 10px; 
     display: grid;
-    grid-template-columns: 20px 1fr 3fr 100px ;
+    grid-template-columns: 20px 2fr 3fr 100px ;
     border: solid 1px black;
 }
 .emails {
@@ -125,16 +123,58 @@
     grid-auto-rows: 150px;
     grid-gap: 10px;
     justify-content: center;
-  }
+}
 
-  .settings-item{
-      border: solid 1px black;
+.settings-item{
+    border: solid 1px black;
+}
+.shortcuts{
+    display: grid;
+    grid-auto-rows: 30px;
+    place-items: center;
+}
+.shortcuts img {
+    height: 30px;
+}
+
+  @media screen and (max-width: 850px) {
+      .settings {
+          display: none;
+      }
+      .main {
+        grid-template-columns: 250px 1fr  50px;
+      }
+      
   }
-  .shortcuts{
-      display: grid;
-      grid-auto-rows: 30px;
-      place-items: center;
-  }
-  .shortcuts img {
-      height: 30px;
-  }
+  @media screen and (max-width: 850px) {
+    .settings {
+        display: none;
+    }
+    .main {
+      grid-template-columns: 250px 1fr  50px;
+    }
+    
+
+    @media screen and (max-width: 700px) {
+        .menu-option h3 {
+          display: none;
+        }
+        .compose,
+        .meet,
+        .chat {
+            display: none;
+        }
+        .main {
+            grid-template-columns: 50px 1fr 50px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .shortcuts {
+            display: none;
+        }
+        .main {
+            grid-template-columns: 50px 1fr ;
+        }
+      }
+}
