@@ -4,15 +4,6 @@
     box-sizing: border-box;
 }
 
-.container,
-.main,
-.left-menu,
-.emails,
-.settings,
-.shortcuts{
-    border: solid 1px black;
-}
-
 .container {
     display: grid;
     grid-template: 
@@ -104,11 +95,45 @@
     border-radius: 100%;
 }
 
+.chat {
+    margin-top: 100px;
+}
+
 #footer {
     text-align: center;
     margin-top: 100px;
 }
 
+.email-item {
+    padding: 10px; 
+    display: grid;
+    grid-template-columns: 20px 1fr 3fr 100px ;
+    border: solid 1px black;
+}
+.emails {
+    display: grid;
+    grid-gap: 5px;
+    grid-auto-rows: 40px;
+    overflow-y: hidden;
+}
 
+.settings {
+    padding: 10px;  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 150px, 1fr));
+    grid-auto-rows: 150px;
+    grid-gap: 10px;
+    justify-content: center;
+  }
 
-
+  .settings-item{
+      border: solid 1px black;
+  }
+  .shortcuts{
+      display: grid;
+      grid-auto-rows: 30px;
+      place-items: center;
+  }
+  .shortcuts img {
+      height: 30px;
+  }
